@@ -1,0 +1,27 @@
+<ion-view title="FlightSearch">
+  <ion-content class="has-header padding">
+    <label class="item item-input">
+      <input type="text" placeholder="Where would you like to go?" ng-blur="run()" ng-model="location">
+    </label>
+    <div class="row">
+      <div class="col">
+        <div class="card flow" ng-repeat="quote in quotes" ng-click="select({{quote}})">
+          <div class="item item-text-wrap">
+            <center>
+              <img src="{{quote.photo}}"></img>
+              <br />
+              <div style="font-size: 0.7em">
+                {{quote.location}}
+                <br />
+                {{quote.startDate}} - {{quote.endDate}}
+                <br />
+                {{quote.numberOfDays}} days (${{quote.price}})
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div class="row">
+    <center>
+  </ion-content>
+</ion-view>

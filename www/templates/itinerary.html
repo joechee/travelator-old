@@ -1,0 +1,21 @@
+<ion-view title="Itinerary">
+  <ion-content class="has-header padding">
+    <div ng-repeat="day in itinerary">
+      <div class="row">
+      Day {{$index + 1}}
+      </div>
+      <div class="row">
+        <div class="card flow" ng-repeat="place in day" ng-click="select({{place}})">
+          <div class="item item-text-wrap">
+            <center>
+              <img style="width:60px;" src="{{place.photo}}"></img>
+              <br />
+              <span style="font-size:0.7em">{{place.name}}</span>
+              <br />
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
